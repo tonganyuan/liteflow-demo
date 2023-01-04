@@ -1,0 +1,17 @@
+server:
+  port: 8080
+liteflow:
+  rule-source-ext-data-map:
+    url: jdbc:mysql://localhost:3306/liteflow-demo?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    applicationName: liteflow-demo
+    #以下是chain表的配置，这个一定得有
+    chainTableName: lite_flow_chain
+    chainApplicationNameField: application_name
+    chainNameField: chain_name
+    elDataField: el_data
+spring:
+  application:
+    name: liteflow-demo
